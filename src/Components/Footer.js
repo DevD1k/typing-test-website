@@ -22,7 +22,7 @@ function Footer() {
             control: (styles) => ({
               ...styles,
               backgroundColor: theme.background,
-              width: "6rem",
+              width: "8rem",
             }),
             menu: (styles) => ({
               ...styles,
