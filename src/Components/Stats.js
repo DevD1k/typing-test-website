@@ -11,6 +11,7 @@ function Stats({
   missedChars,
   extraChars,
   graphData,
+  resetTest,
 }) {
   let timeSet = new Set();
   const newGraph = graphData.filter((item) => {
@@ -100,6 +101,13 @@ function Stats({
         <div className="title">Characters</div>
         <div className="subtitle">
           {correctChars}/{incorrectChars}/{missedChars}/{extraChars}
+        </div>
+        <div
+          className="subtitle"
+          onClick={resetTest}
+          style={{ cursor: "pointer" }}
+        >
+          Restart
         </div>
       </div>
       <div className="right-stats">

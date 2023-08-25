@@ -174,20 +174,38 @@ function TypingBox() {
     wordsSpanRef[0].current.childNodes[0].className = "current";
   }
   // To reset the test to its initial states
-  const resetTest = useCallback(
-    function resetTest() {
-      clearInterval(intervalId);
-      setCountDown(testTime);
-      setCurrWordIndex(0);
-      setCurrCharIndex(0);
-      setTestStart(false);
-      setTestEnd(false);
-      resetWordSpanRefClassname();
-      setWordsArray(generate(50));
-      focusInput();
-    },
-    [testTime, intervalId]
-  );
+  function resetTestIn() {
+    clearInterval(intervalId);
+    setCountDown(testTime);
+    setCurrWordIndex(0);
+    setCurrCharIndex(0);
+    setTestStart(false);
+    setTestEnd(false);
+    resetWordSpanRefClassname();
+    setWordsArray(generate(50));
+    focusInput();
+  }
+
+  function resetAfterTest() {
+    clearInterval(intervalId);
+    setCountDown(testTime);
+    setCurrWordIndex(0);
+    setCurrCharIndex(0);
+    setTestStart(false);
+    setTestEnd(false);
+    setGraphData([]);
+    setCorrectChars(0);
+    setCorrectWords(0);
+    setMissedChars(0);
+    setExtraChars(0);
+    setIncorrectChars(0);
+    setWordsArray(generate(50));
+    focusInput();
+  }
+
+  function resetTest() {
+    return testEnd ? resetAfterTest() : resetTestIn();
+  }
 
   // Set countdown based on the testTime from context
   useEffect(() => resetTest(), [testTime]);
@@ -210,6 +228,7 @@ function TypingBox() {
           missedChars={missedChars}
           extraChars={extraChars}
           graphData={graphData}
+          resetTest={resetTest}
         />
       ) : (
         <div className="type-box" onClick={focusInput}>
