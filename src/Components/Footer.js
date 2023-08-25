@@ -1,9 +1,17 @@
 import Select from "react-select";
 import { themeOptions } from "../Utils/themeOptions";
 import { useTheme } from "../Context/ThemeContext";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const { theme, setTheme } = useTheme();
+  const iconStyle = {
+    fontSize: "2.5rem",
+    margin: "5px",
+    color: `${theme.textColor}`,
+  };
 
   function handleChange(e) {
     setTheme(e.value);
@@ -11,7 +19,21 @@ function Footer() {
   }
   return (
     <div className="footer">
-      <div className="links">Links</div>
+      <div className="links">
+        <span>
+          <Link to="https://github.com/DevD1k" target="_blank">
+            <GitHubIcon style={iconStyle} />
+          </Link>
+        </span>
+        <span>
+          <Link
+            to="https://www.linkedin.com/in/devdutt-mehrol-005205264/"
+            target="_blank"
+          >
+            <LinkedInIcon style={iconStyle} />
+          </Link>
+        </span>
+      </div>
       <div className="themeButton">
         <Select
           onChange={handleChange}
