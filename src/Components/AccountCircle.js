@@ -109,6 +109,7 @@ function AccountCircle() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          backdropFilter: "blur(3px)",
         }}
       >
         <div style={{ width: "400px", textAlign: "center" }}>
@@ -118,14 +119,14 @@ function AccountCircle() {
               value={value}
               onChange={handleValueChange}
             >
-              <Tab label="login" style={{ color: theme.textColor }}></Tab>
-              <Tab label="signup" style={{ color: theme.textColor }}></Tab>
+              <Tab label="login" style={{ color: theme.typeBoxText }}></Tab>
+              <Tab label="signup" style={{ color: theme.typeBoxText }}></Tab>
             </Tabs>
           </AppBar>
           {value === 0 && <LoginForm handleClose={handleClose} />}
           {value === 1 && <SignupForm handleClose={handleClose} />}
           <Box>
-            <span>OR</span>
+            <span style={{ color: theme.background }}>OR</span>
             <GoogleButton
               style={{ width: "100%", marginTop: "12px" }}
               onClick={handleGoogleSignIn}

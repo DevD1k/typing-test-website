@@ -46,6 +46,10 @@ function Footer() {
               backgroundColor: theme.background,
               width: "8rem",
             }),
+            singleValue: (styles) => ({
+              ...styles,
+              color: theme.textColor,
+            }),
             menu: (styles) => ({
               ...styles,
               backgroundColor: theme.background,

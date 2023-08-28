@@ -84,12 +84,12 @@ function SignupForm({ handleClose }) {
         onChange={(e) => setEmail(e.target.value)}
         InputLabelProps={{
           style: {
-            color: theme.textColor,
+            color: theme.background,
           },
         }}
         InputProps={{
           style: {
-            color: theme.textColor,
+            color: theme.background,
           },
         }}
       />
@@ -100,12 +100,12 @@ function SignupForm({ handleClose }) {
         onChange={(e) => setPassword(e.target.value)}
         InputLabelProps={{
           style: {
-            color: theme.textColor,
+            color: theme.background,
           },
         }}
         InputProps={{
           style: {
-            color: theme.textColor,
+            color: theme.background,
           },
         }}
       />
@@ -116,12 +116,12 @@ function SignupForm({ handleClose }) {
         onChange={(e) => setConfirmPassword(e.target.value)}
         InputLabelProps={{
           style: {
-            color: theme.textColor,
+            color: theme.background,
           },
         }}
         InputProps={{
           style: {
-            color: theme.textColor,
+            color: theme.background,
           },
         }}
       />
