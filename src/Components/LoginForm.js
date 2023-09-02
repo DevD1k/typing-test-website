@@ -69,12 +69,12 @@ function LoginForm({ handleClose }) {
         onChange={(e) => setEmail(e.target.value)}
         InputLabelProps={{
           style: {
-            color: theme.background,
+            color: theme.textColor,
           },
         }}
         InputProps={{
           style: {
-            color: theme.background,
+            color: theme.textColor,
           },
         }}
       />
@@ -85,12 +85,12 @@ function LoginForm({ handleClose }) {
         onChange={(e) => setPassword(e.target.value)}
         InputLabelProps={{
           style: {
-            color: theme.background,
+            color: theme.textColor,
           },
         }}
         InputProps={{
           style: {
-            color: theme.background,
+            color: theme.textColor,
           },
         }}
       />

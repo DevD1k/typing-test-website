@@ -39,7 +39,7 @@ function Footer() {
           onChange={handleChange}
           options={themeOptions}
           menuPlacement="top"
-          defaultValue={{ label: themeOptions.label, value: theme }}
+          defaultValue={{ label: theme.label, value: theme }}
           styles={{
             control: (styles) => ({
               ...styles,
