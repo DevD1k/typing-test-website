@@ -1,10 +1,3 @@
-const darkTheme = {
-  label: "Dark",
-  background: "black",
-  textColor: "white",
-  typeBoxText: "grey",
-};
-
 const oceanBreeze = {
   label: "Ocean Breeze",
   background: "#D1EAF5",
@@ -48,7 +41,6 @@ const fledging = {
 };
 
 export const themeOptions = [
-  { label: "Dark", value: darkTheme },
   { label: "Fledging", value: fledging },
   { label: "oceanBreeze", value: oceanBreeze },
   { label: "sunnyMeadows", value: sunnyMeadows },

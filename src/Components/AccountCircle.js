@@ -112,23 +112,48 @@ function AccountCircle() {
           backdropFilter: "blur(3px)",
         }}
       >
-        <div style={{ width: "400px", textAlign: "center" }}>
-          <AppBar position="static" style={{ background: "transparent" }}>
+        <div
+          style={{
+            width: "400px",
+            textAlign: "center",
+            background: `${theme.background}`,
+            borderRadius: "20px",
+          }}
+        >
+          <AppBar
+            position="static"
+            style={{
+              background: "transparent",
+              borderRadius: "20px",
+              boxShadow: "none",
+            }}
+          >
             <Tabs
               variant="fullWidth"
               value={value}
               onChange={handleValueChange}
             >
-              <Tab label="login" style={{ color: theme.typeBoxText }}></Tab>
-              <Tab label="signup" style={{ color: theme.typeBoxText }}></Tab>
+              <Tab label="login" style={{ color: theme.textColor }}></Tab>
+              <Tab label="signup" style={{ color: theme.textColor }}></Tab>
             </Tabs>
           </AppBar>
           {value === 0 && <LoginForm handleClose={handleClose} />}
           {value === 1 && <SignupForm handleClose={handleClose} />}
-          <Box>
-            <span style={{ color: theme.background }}>OR</span>
+          <Box style={{ marginBottom: "20px" }}>
+            <span
+              style={{
+                color: theme.textColor,
+                display: "inline-block",
+                marginBottom: "15px",
+              }}
+            >
+              OR
+            </span>
             <GoogleButton
-              style={{ width: "100%", marginTop: "12px" }}
+              style={{
+                width: "88%",
+                margin: "0 auto",
+              }}
               onClick={handleGoogleSignIn}
             />
           </Box>
